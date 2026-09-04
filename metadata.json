@@ -1,0 +1,8 @@
+{
+  "name": "MM FINANCEIRA",
+  "description": "Funil de vendas e simulação de crédito para MM FINANCEIRA",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

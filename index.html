@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <script>
+      (function() {
+        try {
+          var _fetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _fetch;
+            },
+            set: function(v) {
+              _fetch = v;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // ignore if already defined
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MM FINANCEIRA - Simulação de Crédito e Consórcios</title>
+    <meta name="description" content="Funil de vendas e simulação de crédito para MM FINANCEIRA" />
+    <meta property="og:title" content="MM FINANCEIRA - Simulação de Crédito e Consórcios" />
+    <meta property="og:description" content="Funil de vendas e simulação de crédito para MM FINANCEIRA" />
+    <link rel="preload" as="image" href="https://res.cloudinary.com/dsevqnhts/image/upload/e_trim/v1788544895/Isolar_logo_sem_mudan%C3%A7as_202609041454_qmmoju.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
