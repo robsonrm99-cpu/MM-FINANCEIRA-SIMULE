@@ -14,13 +14,12 @@ const formatCurrency = (value: number) => {
   }).format(value);
 };
 
-const BG_IMAGE = "https://res.cloudinary.com/dsevqnhts/image/upload/e_trim/v1788544895/Isolar_logo_sem_mudan%C3%A7as_202609041454_qmmoju.png";
-const LOGO_IMAGE = "https://res.cloudinary.com/dsevqnhts/image/upload/e_trim/v1788544895/Isolar_logo_sem_mudan%C3%A7as_202609041454_qmmoju.png";
+const BG_IMAGE = "https://res.cloudinary.com/dsevqnhts/image/upload/v1789581810/Extracting_featured_logo_image_20260916144958_xjb7co.jpg";
+const LOGO_IMAGE = "https://res.cloudinary.com/dsevqnhts/image/upload/c_crop,x_120,y_370,w_760,h_280/v1789581810/Extracting_featured_logo_image_20260916144958_xjb7co.jpg";
 
-// Reusable Luxury Brand Badge that presents the complete logo without any clipping
+// Reusable Luxury Brand Badge presenting the complete Sabino Investimentos logo banner
 export const LogoBrand = ({ 
   size = "lg", 
-  variant = "circle",
   className = "" 
 }: { 
   size?: "sm" | "md" | "lg" | "xl"; 
@@ -28,25 +27,23 @@ export const LogoBrand = ({
   className?: string 
 }) => {
   const dimensions = {
-    sm: "w-20 h-20 p-2.5",
-    md: "w-28 h-28 p-3",
-    lg: "w-36 h-36 sm:w-44 sm:h-44 p-3.5 sm:p-4",
-    xl: "w-48 h-48 sm:w-56 sm:h-56 p-4 sm:p-5"
+    sm: "w-48 h-16 p-2 rounded-2xl",
+    md: "w-60 h-20 p-2.5 rounded-2xl",
+    lg: "w-72 sm:w-80 h-24 sm:h-28 p-3 rounded-2xl",
+    xl: "w-80 sm:w-96 h-28 sm:h-32 p-3.5 rounded-3xl"
   }[size];
-
-  const roundedClass = variant === "circle" ? "rounded-full" : "rounded-3xl";
 
   return (
     <div className={`relative group inline-flex items-center justify-center ${className}`}>
-      {/* Multi-tone animated ambient glow matching logo: Royal Blue & Ruby Red */}
-      <div className={`absolute -inset-2.5 ${roundedClass} bg-gradient-to-tr from-[#073691] via-[#D4090B] to-[#38BDF8] opacity-65 blur-xl group-hover:opacity-90 transition-opacity duration-700 animate-pulse`}></div>
+      {/* Multi-tone animated ambient glow matching Sabino Investimentos: Electric Teal & Deep Oceanic Cyan */}
+      <div className="absolute -inset-2 rounded-3xl bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#042D3D] opacity-65 blur-xl group-hover:opacity-90 transition-opacity duration-700 animate-pulse"></div>
       
-      {/* Executive Badge - Crisp white frosted container ensuring 100% full logo visibility */}
-      <div className={`relative ${dimensions} ${roundedClass} bg-white/95 backdrop-blur-xl border-2 border-white shadow-[0_12px_36px_rgba(7,54,145,0.4)] flex items-center justify-center`}>
+      {/* Executive Dark Badge - Seamless dark oceanic card framing the crisp symbol and typography */}
+      <div className={`relative ${dimensions} bg-[#031d2b]/95 backdrop-blur-xl border-2 border-[#1DD7D4]/40 shadow-[0_12px_36px_rgba(29,215,212,0.25)] flex items-center justify-center overflow-hidden`}>
         <img 
           src={LOGO_IMAGE} 
-          alt="MM FINANCEIRA" 
-          className="w-full h-full object-contain filter contrast-[1.02] drop-shadow-sm select-none"
+          alt="SABINO INVESTIMENTOS" 
+          className="w-full h-full object-contain filter contrast-[1.04] drop-shadow-sm select-none"
         />
       </div>
     </div>
@@ -54,10 +51,10 @@ export const LogoBrand = ({
 };
 
 const testimonials = [
-  { name: "Carlos Silva", text: "Consegui planejar a troca da minha frota pagando parcelas justas e sem juros abusivos." },
-  { name: "Mariana Costa", text: "O atendimento foi excepcional! Realizei o sonho da casa própria com um consórcio que cabe no meu bolso." },
-  { name: "Roberto Almeida", text: "Comprei meu trator novo sem descapitalizar minha fazenda. Recomendo muito a MM FINANCEIRA." },
-  { name: "Fernanda Lima", text: "Processo transparente e rápido. Em poucos meses fui contemplada e peguei meu carro zero." }
+  { name: "Carlos Silva", text: "Planejei a renovação da minha frota com a Sabino Investimentos com parcelas justas e sem descapitalizar meu negócio." },
+  { name: "Mariana Costa", text: "O atendimento e a consultoria patrimonial foram excepcionais! Conquistei meu imóvel com uma estratégia financeira impecável." },
+  { name: "Roberto Almeida", text: "Adquiri maquinário agrícola novo com planejamento estratégico. Recomendo com total confiança a Sabino Investimentos." },
+  { name: "Fernanda Lima", text: "Processo 100% transparente, equipe ágil e contemplação rápida para alavancar meus investimentos." }
 ];
 
 const bioReviews = [
@@ -65,19 +62,19 @@ const bioReviews = [
     initial: "C",
     name: "Carlos Eduardo",
     rating: 5,
-    text: "Atendimento impecável! Consegui minha carta de crédito muito mais rápido do que imaginava."
+    text: "Atendimento impecável! Estruturei meu patrimônio e consegui crédito com taxas muito mais vantajosas que os bancos convencionais."
   },
   {
     initial: "A",
     name: "Ana Paula",
     rating: 5,
-    text: "Transparência do início ao fim. Recomendo a MM FINANCEIRA para quem quer segurança e seriedade."
+    text: "Transparência do início ao fim. Recomendo a Sabino Investimentos para quem busca seriedade, governança e rentabilidade inteligente."
   },
   {
     initial: "M",
     name: "Marcos Viana",
     rating: 5,
-    text: "Comprei o caminhão para aumentar minha frota sem juros abusivos. Empresa de extrema confiança!"
+    text: "Adquiri caminhões pesados para expandir minhas operações sem juros abusivos. Empresa de altíssima credibilidade!"
   }
 ];
 
@@ -114,21 +111,21 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
 
       {/* Title & Subtitle */}
       <motion.h1 variants={itemVariants} className="text-2xl font-black text-white tracking-tight mb-1">
-        MM FINANCEIRA
+        SABINO INVESTIMENTOS
       </motion.h1>
-      <motion.p variants={itemVariants} className="text-xs font-bold text-[#EF4444] uppercase tracking-widest mb-4 flex items-center justify-center gap-1.5">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#D4090B] animate-ping"></span>
-        SOLUÇÕES FINANCEIRAS & CRÉDITO
+      <motion.p variants={itemVariants} className="text-xs font-bold text-[#1DD7D4] uppercase tracking-widest mb-4 flex items-center justify-center gap-1.5">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#1DD7D4] animate-ping"></span>
+        CRÉDITO INTELIGENTE & GESTÃO PATRIMONIAL
       </motion.p>
 
       {/* Rating Social Proof Badge */}
-      <motion.div variants={itemVariants} className="bg-[#0c224f]/80 border border-blue-400/25 px-5 py-2.5 rounded-2xl flex items-center gap-2 mb-8 shadow-lg shadow-[#040e24]/40 backdrop-blur-xl">
+      <motion.div variants={itemVariants} className="bg-[#042435]/80 border border-teal-500/25 px-5 py-2.5 rounded-2xl flex items-center gap-2 mb-8 shadow-lg shadow-black/40 backdrop-blur-xl">
         <div className="flex text-amber-400">
           {[...Array(5)].map((_, i) => (
             <Star key={i} size={15} fill="currentColor" />
           ))}
         </div>
-        <span className="text-xs text-blue-100 font-medium">
+        <span className="text-xs text-teal-100 font-medium">
           Mais de <strong className="text-white font-bold">5 mil</strong> clientes satisfeitos
         </span>
       </motion.div>
@@ -141,18 +138,18 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
             onClick={onStartSimulation}
-            className="relative w-full bg-gradient-to-r from-[#073691] via-[#1A50C2] to-[#073691] text-white font-extrabold text-base sm:text-lg py-4 px-5 rounded-2xl shadow-[0_0_30px_rgba(7,54,145,0.55)] hover:shadow-[0_0_40px_rgba(7,54,145,0.8)] flex items-center justify-between transition-all border border-blue-400/40 group cursor-pointer overflow-hidden"
+            className="relative w-full bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#0D9488] text-[#021722] font-black text-base sm:text-lg py-4 px-5 rounded-2xl shadow-[0_0_30px_rgba(29,215,212,0.45)] hover:shadow-[0_0_40px_rgba(29,215,212,0.7)] flex items-center justify-between transition-all border border-teal-200/50 group cursor-pointer overflow-hidden"
           >
             {/* Shimmer Sweep Animation */}
-            <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
+            <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
 
             <div className="flex items-center gap-3 relative z-10">
-              <div className="bg-[#D4090B] p-2.5 rounded-xl text-white shadow-md shadow-red-950/50">
+              <div className="bg-[#021722] p-2.5 rounded-xl text-[#1DD7D4] shadow-md shadow-black/50">
                 <Calculator size={22} className="shrink-0" />
               </div>
               <span className="tracking-tight text-left">Faça sua simulação aqui</span>
             </div>
-            <ArrowRight size={22} className="shrink-0 group-hover:translate-x-1 transition-transform relative z-10" />
+            <ArrowRight size={22} className="shrink-0 group-hover:translate-x-1 transition-transform relative z-10 text-[#021722]" />
           </motion.button>
         </motion.div>
 
@@ -161,10 +158,10 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
           <motion.a
             whileHover={{ scale: 1.01, y: -1 }}
             whileTap={{ scale: 0.98 }}
-            href="https://wa.me/558791975063?text=Ol%C3%A1!%20Vim%20pelo%20link%20da%20bio%20da%20MM%20FINANCEIRA%20e%20gostaria%20de%20falar%20com%20um%20consultor."
+            href="https://wa.me/558791975063?text=Ol%C3%A1!%20Vim%20pelo%20link%20da%20bio%20da%20Sabino%20Investimentos%20e%20gostaria%20de%20falar%20com%20um%20consultor."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full bg-[#0c224f]/70 hover:bg-[#102d68]/85 border border-blue-400/20 hover:border-emerald-400/40 text-white font-semibold text-sm sm:text-base py-3.5 px-4 rounded-2xl shadow-md flex items-center justify-between transition-all group backdrop-blur-xl"
+            className="w-full bg-[#042435]/75 hover:bg-[#06334a]/90 border border-teal-500/20 hover:border-emerald-400/40 text-white font-semibold text-sm sm:text-base py-3.5 px-4 rounded-2xl shadow-md flex items-center justify-between transition-all group backdrop-blur-xl"
           >
             <div className="flex items-center gap-3">
               <div className="bg-emerald-500/20 text-emerald-400 p-2.5 rounded-xl border border-emerald-500/30 shrink-0">
@@ -172,7 +169,7 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
               </div>
               <span className="text-left">Fale com um Consultor (WhatsApp)</span>
             </div>
-            <ChevronRight size={18} className="text-blue-300/50 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
+            <ChevronRight size={18} className="text-teal-300/50 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
           </motion.a>
         </motion.div>
 
@@ -181,16 +178,16 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
           <motion.a
             whileHover={{ scale: 1.01, y: -1 }}
             whileTap={{ scale: 0.98 }}
-            href="mailto:contato@mmfinanceira.com.br?subject=Atendimento%20MM%20FINANCEIRA"
-            className="w-full bg-[#0c224f]/70 hover:bg-[#102d68]/85 border border-blue-400/20 hover:border-blue-400/40 text-white font-semibold text-sm sm:text-base py-3.5 px-4 rounded-2xl shadow-md flex items-center justify-between transition-all group backdrop-blur-xl"
+            href="mailto:contato@sabinoinvestimentos.com.br?subject=Atendimento%20Sabino%20Investimentos"
+            className="w-full bg-[#042435]/75 hover:bg-[#06334a]/90 border border-teal-500/20 hover:border-[#1DD7D4]/40 text-white font-semibold text-sm sm:text-base py-3.5 px-4 rounded-2xl shadow-md flex items-center justify-between transition-all group backdrop-blur-xl"
           >
             <div className="flex items-center gap-3">
-              <div className="bg-[#073691]/30 text-[#38BDF8] p-2.5 rounded-xl border border-blue-400/30 shrink-0">
+              <div className="bg-[#1DD7D4]/20 text-[#1DD7D4] p-2.5 rounded-xl border border-[#1DD7D4]/30 shrink-0">
                 <Mail size={20} />
               </div>
               <span className="text-left">Envie um E-mail</span>
             </div>
-            <ChevronRight size={18} className="text-blue-300/50 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
+            <ChevronRight size={18} className="text-teal-300/50 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
           </motion.a>
         </motion.div>
 
@@ -200,15 +197,15 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
             whileHover={{ scale: 1.01, y: -1 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setShowLocationModal(true)}
-            className="w-full bg-[#0c224f]/70 hover:bg-[#102d68]/85 border border-blue-400/20 hover:border-red-400/40 text-white font-semibold text-sm sm:text-base py-3.5 px-4 rounded-2xl shadow-md flex items-center justify-between transition-all group backdrop-blur-xl cursor-pointer"
+            className="w-full bg-[#042435]/75 hover:bg-[#06334a]/90 border border-teal-500/20 hover:border-cyan-400/40 text-white font-semibold text-sm sm:text-base py-3.5 px-4 rounded-2xl shadow-md flex items-center justify-between transition-all group backdrop-blur-xl cursor-pointer"
           >
             <div className="flex items-center gap-3">
-              <div className="bg-[#D4090B]/20 text-[#EF4444] p-2.5 rounded-xl border border-[#D4090B]/30 shrink-0">
+              <div className="bg-cyan-500/20 text-[#38BDF8] p-2.5 rounded-xl border border-cyan-500/30 shrink-0">
                 <MapPin size={20} />
               </div>
               <span className="text-left">Nossa Localização</span>
             </div>
-            <ChevronRight size={18} className="text-blue-300/50 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
+            <ChevronRight size={18} className="text-teal-300/50 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
           </motion.button>
         </motion.div>
       </div>
@@ -217,18 +214,18 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
       <motion.div variants={itemVariants} className="w-full">
         <div className="relative my-8 text-center">
           <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-blue-400/20"></div>
+            <div className="w-full border-t border-teal-500/20"></div>
           </div>
-          <span className="relative bg-[#071739] px-4 text-xs font-bold text-blue-300/70 uppercase tracking-widest">
+          <span className="relative bg-[#021722] px-4 text-xs font-bold text-teal-300/70 uppercase tracking-widest">
             AVALIAÇÕES REAIS
           </span>
         </div>
 
         <div className="space-y-3.5 text-left">
           {bioReviews.map((rev, idx) => (
-            <div key={idx} className="bg-[#0c224f]/75 border border-blue-400/20 p-4 rounded-2xl backdrop-blur-xl shadow-lg shadow-[#040e24]/40">
+            <div key={idx} className="bg-[#042435]/75 border border-teal-500/20 p-4 rounded-2xl backdrop-blur-xl shadow-lg shadow-black/40">
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#073691] to-[#2563EB] text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-md border border-blue-300/30">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#0891B2] to-[#1DD7D4] text-[#021722] font-black text-xs flex items-center justify-center shrink-0 shadow-md border border-teal-200/40">
                   {rev.initial}
                 </div>
                 <div>
@@ -240,7 +237,7 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
                   </div>
                 </div>
               </div>
-              <p className="text-blue-100/90 text-xs italic leading-relaxed pl-1">
+              <p className="text-teal-100/90 text-xs italic leading-relaxed pl-1">
                 "{rev.text}"
               </p>
             </div>
@@ -249,11 +246,11 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
       </motion.div>
 
       {/* FOOTER */}
-      <motion.div variants={itemVariants} className="mt-12 text-center text-xs text-blue-300/60">
-        <p className="flex items-center justify-center gap-1 text-blue-200 font-medium mb-1">
-          <MapPin size={13} className="text-[#38BDF8]" /> Petrolina - PE
+      <motion.div variants={itemVariants} className="mt-12 text-center text-xs text-teal-300/60">
+        <p className="flex items-center justify-center gap-1 text-teal-200 font-medium mb-1">
+          <MapPin size={13} className="text-[#1DD7D4]" /> Petrolina - PE
         </p>
-        <p>&copy; {new Date().getFullYear()} MM FINANCEIRA. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} SABINO INVESTIMENTOS. Todos os direitos reservados.</p>
       </motion.div>
 
       {/* LOCATION MODAL */}
@@ -263,7 +260,7 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-[#040d21]/80 backdrop-blur-md flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-[#010c12]/80 backdrop-blur-md flex items-center justify-center p-4"
             onClick={() => setShowLocationModal(false)}
           >
             <motion.div 
@@ -271,39 +268,39 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-[#0a1f4d] border border-blue-400/30 p-6 rounded-3xl max-w-sm w-full text-center relative shadow-2xl shadow-black/80"
+              className="bg-[#042435] border border-teal-500/30 p-6 rounded-3xl max-w-sm w-full text-center relative shadow-2xl shadow-black/80"
             >
               <button 
                 onClick={() => setShowLocationModal(false)}
-                className="absolute top-4 right-4 text-blue-300 hover:text-white p-1 rounded-full bg-blue-900/40 hover:bg-blue-800/60 transition-colors cursor-pointer"
+                className="absolute top-4 right-4 text-teal-300 hover:text-white p-1 rounded-full bg-teal-950/40 hover:bg-teal-900/60 transition-colors cursor-pointer"
               >
                 <X size={20} />
               </button>
 
-              <div className="w-12 h-12 rounded-full bg-[#073691]/30 text-[#38BDF8] flex items-center justify-center mx-auto mb-4 border border-blue-400/40 shadow-inner">
+              <div className="w-12 h-12 rounded-full bg-[#1DD7D4]/20 text-[#1DD7D4] flex items-center justify-center mx-auto mb-4 border border-teal-400/40 shadow-inner">
                 <MapPin size={24} />
               </div>
 
               <h3 className="text-lg font-bold text-white mb-2">Atendimento Presencial e Online</h3>
-              <p className="text-blue-200 text-sm mb-4">
+              <p className="text-teal-200 text-sm mb-4">
                 Atendemos presencialmente em Petrolina e com especialistas online para todo o Brasil:
               </p>
 
-              <div className="bg-[#061536]/80 p-4 rounded-2xl border border-blue-400/20 text-xs text-blue-200 space-y-2 mb-6 text-left">
+              <div className="bg-[#021722]/80 p-4 rounded-2xl border border-teal-500/20 text-xs text-teal-200 space-y-2 mb-6 text-left">
                 <p className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#D4090B]"></span>
+                  <span className="w-2 h-2 rounded-full bg-[#1DD7D4]"></span>
                   <strong className="text-white">Petrolina - PE e Região</strong>
                 </p>
-                <p className="text-blue-300/80 pl-4">
-                  Consultoria especializada sob medida para seu objetivo financeiro.
+                <p className="text-teal-300/80 pl-4">
+                  Consultoria especializada sob medida para seu objetivo patrimonial.
                 </p>
               </div>
 
               <a
-                href="https://wa.me/558791975063?text=Ol%C3%A1!%20Gostaria%20de%20saber%20o%20endere%C3%A7o%20ou%20agendar%20uma%20visita%20na%20MM%20FINANCEIRA."
+                href="https://wa.me/558791975063?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20com%20um%20especialista%20da%20SABINO%20INVESTIMENTOS."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-gradient-to-r from-[#073691] via-[#1A50C2] to-[#073691] text-white font-bold py-3 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-blue-950/60 hover:brightness-110 transition-all text-sm border border-blue-400/40 cursor-pointer"
+                className="w-full bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#0D9488] text-[#021722] font-black py-3 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-teal-950/60 hover:brightness-110 transition-all text-sm border border-teal-300/40 cursor-pointer"
               >
                 <MessageCircle size={18} /> Agendar Visita no WhatsApp
               </a>
@@ -347,25 +344,25 @@ const Landing = ({ onNext }: { onNext: () => void }) => {
         <LogoBrand size="lg" />
       </motion.div>
 
-      <motion.div variants={itemVariants} className="bg-[#0c224f]/80 text-white px-6 py-3 rounded-2xl flex flex-col items-center mb-8 border border-blue-400/25 shadow-lg shadow-[#040e24]/40 backdrop-blur-xl">
-        <div className="flex items-center gap-2 font-bold text-sm mb-2 tracking-wide text-center text-[#EF4444]">
-          <Gift size={18} className="shrink-0 text-[#D4090B]" /> CONDIÇÃO EXCLUSIVA MM FINANCEIRA
+      <motion.div variants={itemVariants} className="bg-[#042435]/85 text-white px-6 py-3 rounded-2xl flex flex-col items-center mb-8 border border-teal-500/25 shadow-lg shadow-black/40 backdrop-blur-xl">
+        <div className="flex items-center gap-2 font-bold text-sm mb-2 tracking-wide text-center text-[#1DD7D4]">
+          <TrendingUp size={18} className="shrink-0 text-[#1DD7D4]" /> CONDIÇÃO EXCLUSIVA SABINO INVESTIMENTOS
         </div>
-        <div className="flex items-center gap-1.5 bg-gradient-to-r from-[#073691] via-[#1A50C2] to-[#073691] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md border border-blue-400/30">
-          <Clock size={16} className="text-[#38BDF8]" /> {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
+        <div className="flex items-center gap-1.5 bg-gradient-to-r from-[#0E7490] via-[#0891B2] to-[#042D3D] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md border border-teal-400/30">
+          <Clock size={16} className="text-[#1DD7D4]" /> {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
         </div>
       </motion.div>
 
       <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl font-extrabold text-white mb-5 leading-[1.15] tracking-tight drop-shadow-lg">
-        Realize seus planos com a <span className="bg-gradient-to-r from-sky-400 via-blue-200 to-white bg-clip-text text-transparent">MM FINANCEIRA</span> 💫
+        Realize seus planos com a <span className="bg-gradient-to-r from-[#1DD7D4] via-teal-100 to-white bg-clip-text text-transparent">SABINO INVESTIMENTOS</span> 📈
       </motion.h1>
 
       <motion.p 
         variants={itemVariants} 
-        className="text-blue-100/90 font-medium mb-10 text-[18px] leading-[30.25px] w-full max-w-xs drop-shadow-md"
+        className="text-teal-100/90 font-medium mb-10 text-[18px] leading-[30.25px] w-full max-w-xs drop-shadow-md"
       >
         Crédito inteligente sem juros abusivos.<br/>
-        Descubra seu poder de compra.
+        Descubra seu poder de compra e alavancagem.
       </motion.p>
 
       <motion.div variants={itemVariants} className="w-full max-w-md mb-12">
@@ -373,32 +370,32 @@ const Landing = ({ onNext }: { onNext: () => void }) => {
           whileHover={{ scale: 1.02, y: -2 }}
           whileTap={{ scale: 0.96 }}
           onClick={onNext}
-          className="relative w-full bg-gradient-to-r from-[#073691] via-[#1A50C2] to-[#073691] hover:brightness-110 text-white text-xl font-bold py-4.5 rounded-full shadow-2xl shadow-blue-900/50 transition-all flex items-center justify-center gap-2 border border-blue-400/40 cursor-pointer overflow-hidden group"
+          className="relative w-full bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#0D9488] hover:brightness-110 text-[#021722] text-xl font-black py-4.5 rounded-full shadow-[0_0_35px_rgba(29,215,212,0.45)] transition-all flex items-center justify-center gap-2 border border-teal-200/50 cursor-pointer overflow-hidden group"
         >
           {/* Shimmer sweep animation */}
-          <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
+          <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
           
-          <span className="relative z-10 flex items-center gap-2">
+          <span className="relative z-10 flex items-center gap-2 text-[#021722]">
             Fazer Simulação <ArrowRight size={24} className="group-hover:translate-x-1.5 transition-transform" />
           </span>
         </motion.button>
       </motion.div>
 
       <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-3 mb-12">
-        <div className="flex items-center gap-1.5 bg-[#0c224f]/75 border border-blue-400/20 px-4 py-2 rounded-full text-sm font-semibold text-blue-100 shadow-md backdrop-blur-xl">
-          <CheckCircle2 size={18} className="text-[#38BDF8]" /> SEM JUROS
+        <div className="flex items-center gap-1.5 bg-[#042435]/75 border border-teal-500/20 px-4 py-2 rounded-full text-sm font-semibold text-teal-100 shadow-md backdrop-blur-xl">
+          <CheckCircle2 size={18} className="text-[#1DD7D4]" /> SEM JUROS BANCÁRIOS
         </div>
-        <div className="flex items-center gap-1.5 bg-[#0c224f]/75 border border-blue-400/20 px-4 py-2 rounded-full text-sm font-semibold text-blue-100 shadow-md backdrop-blur-xl">
-          <ShieldCheck size={18} className="text-[#EF4444]" /> NEGATIVADOS
+        <div className="flex items-center gap-1.5 bg-[#042435]/75 border border-teal-500/20 px-4 py-2 rounded-full text-sm font-semibold text-teal-100 shadow-md backdrop-blur-xl">
+          <ShieldCheck size={18} className="text-emerald-400" /> ALAVANCAGEM SEGURA
         </div>
-        <div className="flex items-center gap-1.5 bg-[#0c224f]/75 border border-blue-400/20 px-4 py-2 rounded-full text-sm font-semibold text-blue-100 shadow-md backdrop-blur-xl">
-          <User size={18} className="text-[#38BDF8]" /> ESPECIALISTAS
+        <div className="flex items-center gap-1.5 bg-[#042435]/75 border border-teal-500/20 px-4 py-2 rounded-full text-sm font-semibold text-teal-100 shadow-md backdrop-blur-xl">
+          <User size={18} className="text-[#1DD7D4]" /> CONSULTORES SÊNIOR
         </div>
       </motion.div>
 
       <motion.div variants={itemVariants} className="mt-4 w-full max-w-md">
-        <p className="text-xs font-bold text-blue-300/70 uppercase tracking-widest mb-4">Mais de 5.000 clientes satisfeitos</p>
-        <div className="bg-[#0c224f]/80 p-6 rounded-3xl shadow-xl border border-blue-400/20 text-left relative backdrop-blur-xl h-[195px] flex flex-col justify-center">
+        <p className="text-xs font-bold text-teal-300/70 uppercase tracking-widest mb-4">Mais de 5.000 clientes satisfeitos</p>
+        <div className="bg-[#042435]/80 p-6 rounded-3xl shadow-xl border border-teal-500/20 text-left relative backdrop-blur-xl h-[195px] flex flex-col justify-center">
           <div className="flex text-amber-400 mb-3">
             <Star size={18} fill="currentColor" />
             <Star size={18} fill="currentColor" />
@@ -416,11 +413,11 @@ const Landing = ({ onNext }: { onNext: () => void }) => {
                 transition={{ duration: 0.3 }}
                 className="absolute inset-0"
               >
-                <p className="text-blue-100/90 italic text-[15px] leading-relaxed mb-3">
+                <p className="text-teal-100/90 italic text-[15px] leading-relaxed mb-3">
                   "{testimonials[currentTestimonial].text}"
                 </p>
                 <p className="text-white font-bold text-sm flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#38BDF8]"></span>
+                  <span className="w-2 h-2 rounded-full bg-[#1DD7D4]"></span>
                   {testimonials[currentTestimonial].name}
                 </p>
               </motion.div>
@@ -436,15 +433,15 @@ const Landing = ({ onNext }: { onNext: () => void }) => {
         onClick={() => {
           document.getElementById('top-of-scroll')?.scrollIntoView({ behavior: 'smooth' });
         }}
-        className="mt-16 flex items-center gap-2 text-blue-200 font-bold hover:text-[#38BDF8] transition-colors bg-[#0a1f4d]/85 px-6 py-3 rounded-full backdrop-blur-xl border border-blue-400/25 shadow-md cursor-pointer"
+        className="mt-16 flex items-center gap-2 text-teal-200 font-bold hover:text-[#1DD7D4] transition-colors bg-[#042435]/85 px-6 py-3 rounded-full backdrop-blur-xl border border-teal-500/25 shadow-md cursor-pointer"
       >
         <ArrowUp size={20} /> Voltar ao topo
       </motion.button>
 
       <motion.div variants={itemVariants} className="mt-16 text-center opacity-90">
-        <p className="text-white text-base font-bold tracking-wide">MM FINANCEIRA</p>
-        <p className="text-blue-300/70 text-xs mt-1">Soluções financeiras inteligentes para seus projetos.</p>
-        <p className="text-blue-400/50 text-xs mt-1">&copy; {new Date().getFullYear()} Todos os direitos reservados.</p>
+        <p className="text-white text-base font-bold tracking-wide">SABINO INVESTIMENTOS</p>
+        <p className="text-teal-300/70 text-xs mt-1">Soluções financeiras inteligentes, consórcios e investimentos estratégicos.</p>
+        <p className="text-teal-400/50 text-xs mt-1">&copy; {new Date().getFullYear()} SABINO INVESTIMENTOS. Todos os direitos reservados.</p>
       </motion.div>
     </motion.div>
   );
@@ -461,7 +458,7 @@ const targets = [
 const Step1 = ({ onSelect }: { onSelect: (val: string) => void }) => (
   <div className="px-6 py-8">
     <h2 className="text-3xl font-extrabold text-white mb-2 tracking-tight">Qual é o seu alvo?</h2>
-    <p className="text-blue-200/80 mb-8 text-lg">Escolha o segmento desejado.</p>
+    <p className="text-teal-200/80 mb-8 text-lg">Escolha o segmento desejado.</p>
     
     <div className="flex flex-col gap-3.5">
       {targets.map(t => (
@@ -470,16 +467,16 @@ const Step1 = ({ onSelect }: { onSelect: (val: string) => void }) => (
           whileTap={{ scale: 0.97 }}
           key={t.id}
           onClick={() => onSelect(t.title)}
-          className="flex items-center gap-5 p-4.5 bg-[#0c224f]/75 border border-blue-400/20 rounded-3xl shadow-lg hover:border-blue-400/60 hover:bg-[#102d68]/85 transition-all text-left group backdrop-blur-xl w-full cursor-pointer"
+          className="flex items-center gap-5 p-4.5 bg-[#042435]/75 border border-teal-500/20 rounded-3xl shadow-lg hover:border-teal-400/60 hover:bg-[#06334a]/90 transition-all text-left group backdrop-blur-xl w-full cursor-pointer"
         >
-          <div className="bg-[#073691]/30 border border-blue-400/30 p-3.5 rounded-2xl text-[#38BDF8] group-hover:bg-[#073691] group-hover:text-white group-hover:border-blue-300 group-hover:scale-105 transition-all shrink-0">
+          <div className="bg-[#021722] border border-teal-500/30 p-3.5 rounded-2xl text-[#1DD7D4] group-hover:bg-[#1DD7D4] group-hover:text-[#021722] group-hover:border-teal-200 group-hover:scale-105 transition-all shrink-0">
             <t.icon size={26} strokeWidth={2} />
           </div>
           <div className="flex-1">
             <h3 className="font-bold text-white text-lg">{t.title}</h3>
-            <p className="text-blue-300/60 text-sm mt-0.5">{t.desc}</p>
+            <p className="text-teal-300/60 text-sm mt-0.5">{t.desc}</p>
           </div>
-          <ChevronRight size={20} className="text-blue-400/40 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
+          <ChevronRight size={20} className="text-teal-400/40 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
         </motion.button>
       ))}
     </div>
@@ -491,11 +488,11 @@ const creditPresets = [50000, 100000, 200000, 350000, 500000];
 const Step2 = ({ value, onChange, onNext }: any) => (
   <div className="px-6 py-8 flex flex-col h-full min-h-[70vh]">
     <h2 className="text-3xl font-extrabold text-white mb-2 tracking-tight">Valor do Crédito</h2>
-    <p className="text-blue-200/80 mb-8 text-lg">Quanto você precisa para realizar este objetivo?</p>
+    <p className="text-teal-200/80 mb-8 text-lg">Quanto você precisa para realizar este objetivo?</p>
     
-    <div className="bg-[#0c224f]/80 p-8 rounded-[2rem] shadow-xl border border-blue-400/20 mb-8 backdrop-blur-xl">
+    <div className="bg-[#042435]/80 p-8 rounded-[2rem] shadow-xl border border-teal-500/20 mb-8 backdrop-blur-xl">
       <div className="text-center mb-6">
-        <span className="text-[2.65rem] sm:text-[2.85rem] font-black bg-gradient-to-r from-white via-sky-200 to-sky-400 bg-clip-text text-transparent tracking-tight drop-shadow-md">
+        <span className="text-[2.65rem] sm:text-[2.85rem] font-black bg-gradient-to-r from-white via-teal-100 to-[#1DD7D4] bg-clip-text text-transparent tracking-tight drop-shadow-md">
           {formatCurrency(value)}
         </span>
       </div>
@@ -509,13 +506,13 @@ const Step2 = ({ value, onChange, onNext }: any) => (
         onChange={(e) => onChange(Number(e.target.value))}
         className="mb-6 cursor-pointer"
       />
-      <div className="flex justify-between text-xs font-semibold text-blue-300/60 mb-6">
+      <div className="flex justify-between text-xs font-semibold text-teal-300/60 mb-6">
         <span>R$ 20 mil</span>
         <span>R$ 500 mil</span>
       </div>
 
       {/* Quick Select Chips */}
-      <div className="flex flex-wrap justify-center gap-2 pt-2 border-t border-blue-400/15">
+      <div className="flex flex-wrap justify-center gap-2 pt-2 border-t border-teal-500/15">
         {creditPresets.map(preset => (
           <button
             key={preset}
@@ -523,8 +520,8 @@ const Step2 = ({ value, onChange, onNext }: any) => (
             onClick={() => onChange(preset)}
             className={`text-xs px-3 py-1.5 rounded-full font-bold transition-all cursor-pointer ${
               value === preset 
-                ? 'bg-[#2563EB] text-white shadow-md shadow-blue-500/30 border border-blue-300' 
-                : 'bg-blue-900/40 text-blue-200 hover:bg-blue-800/60 border border-blue-500/20'
+                ? 'bg-[#1DD7D4] text-[#021722] shadow-md shadow-teal-500/30 border border-teal-200' 
+                : 'bg-teal-950/40 text-teal-200 hover:bg-teal-900/60 border border-teal-500/20'
             }`}
           >
             {formatCurrency(preset)}
@@ -537,10 +534,10 @@ const Step2 = ({ value, onChange, onNext }: any) => (
       whileHover={{ scale: 1.02, y: -2 }}
       whileTap={{ scale: 0.96 }}
       onClick={onNext}
-      className="relative w-full bg-gradient-to-r from-[#073691] via-[#1A50C2] to-[#073691] hover:brightness-110 text-white text-xl font-bold py-4.5 rounded-full shadow-xl shadow-blue-900/50 transition-all mt-auto border border-blue-400/40 cursor-pointer overflow-hidden group"
+      className="relative w-full bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#0D9488] hover:brightness-110 text-[#021722] text-xl font-black py-4.5 rounded-full shadow-[0_0_35px_rgba(29,215,212,0.45)] transition-all mt-auto border border-teal-200/50 cursor-pointer overflow-hidden group"
     >
-      <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
-      <span className="relative z-10 flex items-center justify-center gap-2">
+      <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
+      <span className="relative z-10 flex items-center justify-center gap-2 text-[#021722]">
         Avançar <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
       </span>
     </motion.button>
@@ -552,11 +549,11 @@ const entryPresets = [5000, 15000, 30000, 60000, 100000];
 const Step3 = ({ value, onChange, onNext }: any) => (
   <div className="px-6 py-8 flex flex-col h-full min-h-[70vh]">
     <h2 className="text-3xl font-extrabold text-white mb-2 tracking-tight">Valor de Entrada</h2>
-    <p className="text-blue-200/80 mb-8 text-lg">Qual valor você tem disponível para investir agora?</p>
+    <p className="text-teal-200/80 mb-8 text-lg">Qual valor você tem disponível para investir agora?</p>
     
-    <div className="bg-[#0c224f]/80 p-8 rounded-[2rem] shadow-xl border border-blue-400/20 mb-8 backdrop-blur-xl">
+    <div className="bg-[#042435]/80 p-8 rounded-[2rem] shadow-xl border border-teal-500/20 mb-8 backdrop-blur-xl">
       <div className="text-center mb-6">
-        <span className="text-[2.65rem] sm:text-[2.85rem] font-black bg-gradient-to-r from-white via-sky-200 to-sky-400 bg-clip-text text-transparent tracking-tight drop-shadow-md">
+        <span className="text-[2.65rem] sm:text-[2.85rem] font-black bg-gradient-to-r from-white via-teal-100 to-[#1DD7D4] bg-clip-text text-transparent tracking-tight drop-shadow-md">
           {formatCurrency(value)}
         </span>
       </div>
@@ -570,13 +567,13 @@ const Step3 = ({ value, onChange, onNext }: any) => (
         onChange={(e) => onChange(Number(e.target.value))}
         className="mb-6 cursor-pointer"
       />
-      <div className="flex justify-between text-xs font-semibold text-blue-300/60 mb-6">
+      <div className="flex justify-between text-xs font-semibold text-teal-300/60 mb-6">
         <span>R$ 5 mil</span>
         <span>R$ 500 mil</span>
       </div>
 
       {/* Quick Select Chips */}
-      <div className="flex flex-wrap justify-center gap-2 pt-2 border-t border-blue-400/15">
+      <div className="flex flex-wrap justify-center gap-2 pt-2 border-t border-teal-500/15">
         {entryPresets.map(preset => (
           <button
             key={preset}
@@ -584,8 +581,8 @@ const Step3 = ({ value, onChange, onNext }: any) => (
             onClick={() => onChange(preset)}
             className={`text-xs px-3 py-1.5 rounded-full font-bold transition-all cursor-pointer ${
               value === preset 
-                ? 'bg-[#2563EB] text-white shadow-md shadow-blue-500/30 border border-blue-300' 
-                : 'bg-blue-900/40 text-blue-200 hover:bg-blue-800/60 border border-blue-500/20'
+                ? 'bg-[#1DD7D4] text-[#021722] shadow-md shadow-teal-500/30 border border-teal-200' 
+                : 'bg-teal-950/40 text-teal-200 hover:bg-teal-900/60 border border-teal-500/20'
             }`}
           >
             {formatCurrency(preset)}
@@ -598,10 +595,10 @@ const Step3 = ({ value, onChange, onNext }: any) => (
       whileHover={{ scale: 1.02, y: -2 }}
       whileTap={{ scale: 0.96 }}
       onClick={onNext}
-      className="relative w-full bg-gradient-to-r from-[#073691] via-[#1A50C2] to-[#073691] hover:brightness-110 text-white text-xl font-bold py-4.5 rounded-full shadow-xl shadow-blue-900/50 transition-all mt-auto border border-blue-400/40 cursor-pointer overflow-hidden group"
+      className="relative w-full bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#0D9488] hover:brightness-110 text-[#021722] text-xl font-black py-4.5 rounded-full shadow-[0_0_35px_rgba(29,215,212,0.45)] transition-all mt-auto border border-teal-200/50 cursor-pointer overflow-hidden group"
     >
-      <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
-      <span className="relative z-10 flex items-center justify-center gap-2">
+      <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
+      <span className="relative z-10 flex items-center justify-center gap-2 text-[#021722]">
         Avançar <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
       </span>
     </motion.button>
@@ -613,11 +610,11 @@ const installmentPresets = [800, 1500, 2500, 4000, 7000];
 const Step4 = ({ value, onChange, onNext }: any) => (
   <div className="px-6 py-8 flex flex-col h-full min-h-[70vh]">
     <h2 className="text-3xl font-extrabold text-white mb-2 tracking-tight">Investimento Mensal</h2>
-    <p className="text-blue-200/80 mb-8 text-lg">Qual parcela cabe confortavelmente no seu bolso?</p>
+    <p className="text-teal-200/80 mb-8 text-lg">Qual parcela cabe confortavelmente no seu bolso?</p>
     
-    <div className="bg-[#0c224f]/80 p-8 rounded-[2rem] shadow-xl border border-blue-400/20 mb-8 backdrop-blur-xl">
+    <div className="bg-[#042435]/80 p-8 rounded-[2rem] shadow-xl border border-teal-500/20 mb-8 backdrop-blur-xl">
       <div className="text-center mb-6">
-        <span className="text-[2.65rem] sm:text-[2.85rem] font-black bg-gradient-to-r from-white via-sky-200 to-sky-400 bg-clip-text text-transparent tracking-tight drop-shadow-md">
+        <span className="text-[2.65rem] sm:text-[2.85rem] font-black bg-gradient-to-r from-white via-teal-100 to-[#1DD7D4] bg-clip-text text-transparent tracking-tight drop-shadow-md">
           {formatCurrency(value)}
         </span>
       </div>
@@ -631,13 +628,13 @@ const Step4 = ({ value, onChange, onNext }: any) => (
         onChange={(e) => onChange(Number(e.target.value))}
         className="mb-6 cursor-pointer"
       />
-      <div className="flex justify-between text-xs font-semibold text-blue-300/60 mb-6">
+      <div className="flex justify-between text-xs font-semibold text-teal-300/60 mb-6">
         <span>R$ 500</span>
         <span>R$ 20.000</span>
       </div>
 
       {/* Quick Select Chips */}
-      <div className="flex flex-wrap justify-center gap-2 pt-2 border-t border-blue-400/15">
+      <div className="flex flex-wrap justify-center gap-2 pt-2 border-t border-teal-500/15">
         {installmentPresets.map(preset => (
           <button
             key={preset}
@@ -645,8 +642,8 @@ const Step4 = ({ value, onChange, onNext }: any) => (
             onClick={() => onChange(preset)}
             className={`text-xs px-3 py-1.5 rounded-full font-bold transition-all cursor-pointer ${
               value === preset 
-                ? 'bg-[#2563EB] text-white shadow-md shadow-blue-500/30 border border-blue-300' 
-                : 'bg-blue-900/40 text-blue-200 hover:bg-blue-800/60 border border-blue-500/20'
+                ? 'bg-[#1DD7D4] text-[#021722] shadow-md shadow-teal-500/30 border border-teal-200' 
+                : 'bg-teal-950/40 text-teal-200 hover:bg-teal-900/60 border border-teal-500/20'
             }`}
           >
             {formatCurrency(preset)}
@@ -659,10 +656,10 @@ const Step4 = ({ value, onChange, onNext }: any) => (
       whileHover={{ scale: 1.02, y: -2 }}
       whileTap={{ scale: 0.96 }}
       onClick={onNext}
-      className="relative w-full bg-gradient-to-r from-[#073691] via-[#1A50C2] to-[#073691] hover:brightness-110 text-white text-xl font-bold py-4.5 rounded-full shadow-xl shadow-blue-900/50 transition-all mt-auto border border-blue-400/40 cursor-pointer overflow-hidden group"
+      className="relative w-full bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#0D9488] hover:brightness-110 text-[#021722] text-xl font-black py-4.5 rounded-full shadow-[0_0_35px_rgba(29,215,212,0.45)] transition-all mt-auto border border-teal-200/50 cursor-pointer overflow-hidden group"
     >
-      <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
-      <span className="relative z-10 flex items-center justify-center gap-2">
+      <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
+      <span className="relative z-10 flex items-center justify-center gap-2 text-[#021722]">
         Avançar <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
       </span>
     </motion.button>
@@ -672,11 +669,11 @@ const Step4 = ({ value, onChange, onNext }: any) => (
 const Step5 = ({ formData, onChange, onNext }: any) => (
   <div className="px-6 py-8 flex flex-col h-full min-h-[70vh]">
     <h2 className="text-3xl font-extrabold text-white mb-2 tracking-tight">Último passo</h2>
-    <p className="text-blue-200/80 mb-10 text-lg">Para onde enviamos seu plano estratégico?</p>
+    <p className="text-teal-200/80 mb-10 text-lg">Para onde enviamos seu plano estratégico?</p>
     
     <div className="flex flex-col gap-5 mb-10">
       <div className="relative">
-        <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-blue-300">
+        <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-teal-300">
           <User size={22} />
         </div>
         <input 
@@ -684,12 +681,12 @@ const Step5 = ({ formData, onChange, onNext }: any) => (
           placeholder="Seu nome completo"
           value={formData.name}
           onChange={(e) => onChange('name', e.target.value)}
-          className="w-full pl-14 pr-5 py-4.5 bg-[#0a1f4d]/80 border border-blue-400/30 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-[#38BDF8] focus:border-transparent text-lg shadow-inner placeholder:text-blue-300/40 font-medium text-white backdrop-blur-xl"
+          className="w-full pl-14 pr-5 py-4.5 bg-[#042435]/80 border border-teal-500/30 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-[#1DD7D4] focus:border-transparent text-lg shadow-inner placeholder:text-teal-300/40 font-medium text-white backdrop-blur-xl"
         />
       </div>
       
       <div className="relative">
-        <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-blue-300">
+        <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-teal-300">
           <User size={22} />
         </div>
         <input 
@@ -697,12 +694,12 @@ const Step5 = ({ formData, onChange, onNext }: any) => (
           placeholder="Indicado por (Opcional)"
           value={formData.referredBy}
           onChange={(e) => onChange('referredBy', e.target.value)}
-          className="w-full pl-14 pr-5 py-4.5 bg-[#0a1f4d]/80 border border-blue-400/30 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-[#38BDF8] focus:border-transparent text-lg shadow-inner placeholder:text-blue-300/40 font-medium text-white backdrop-blur-xl"
+          className="w-full pl-14 pr-5 py-4.5 bg-[#042435]/80 border border-teal-500/30 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-[#1DD7D4] focus:border-transparent text-lg shadow-inner placeholder:text-teal-300/40 font-medium text-white backdrop-blur-xl"
         />
       </div>
 
       <div className="relative">
-        <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-blue-300">
+        <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-teal-300">
           <Phone size={22} />
         </div>
         <input 
@@ -710,7 +707,7 @@ const Step5 = ({ formData, onChange, onNext }: any) => (
           placeholder="Seu WhatsApp (com DDD)"
           value={formData.phone}
           onChange={(e) => onChange('phone', e.target.value)}
-          className="w-full pl-14 pr-5 py-4.5 bg-[#0a1f4d]/80 border border-blue-400/30 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-[#38BDF8] focus:border-transparent text-lg shadow-inner placeholder:text-blue-300/40 font-medium text-white backdrop-blur-xl"
+          className="w-full pl-14 pr-5 py-4.5 bg-[#042435]/80 border border-teal-500/30 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-[#1DD7D4] focus:border-transparent text-lg shadow-inner placeholder:text-teal-300/40 font-medium text-white backdrop-blur-xl"
         />
       </div>
     </div>
@@ -720,16 +717,16 @@ const Step5 = ({ formData, onChange, onNext }: any) => (
       whileTap={{ scale: 0.96 }}
       onClick={onNext}
       disabled={!formData.name || !formData.phone}
-      className="relative w-full bg-gradient-to-r from-[#073691] via-[#1A50C2] to-[#073691] hover:brightness-110 text-white text-xl font-bold py-4.5 rounded-full shadow-xl shadow-blue-900/50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-auto border border-blue-400/40 cursor-pointer overflow-hidden group"
+      className="relative w-full bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#0D9488] hover:brightness-110 text-[#021722] text-xl font-black py-4.5 rounded-full shadow-[0_0_35px_rgba(29,215,212,0.45)] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-auto border border-teal-200/50 cursor-pointer overflow-hidden group"
     >
-      <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
-      <span className="relative z-10 flex items-center justify-center gap-2">
+      <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 animate-shimmer-sweep pointer-events-none"></div>
+      <span className="relative z-10 flex items-center justify-center gap-2 text-[#021722]">
         Receber Plano Exclusivo <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
       </span>
     </motion.button>
     
-    <div className="flex items-center justify-center gap-2 mt-8 text-blue-300/60 text-sm font-semibold tracking-wide">
-      <Lock size={16} className="text-[#38BDF8]" /> SEUS DADOS ESTÃO 100% SEGUROS
+    <div className="flex items-center justify-center gap-2 mt-8 text-teal-300/70 text-sm font-semibold tracking-wide">
+      <Lock size={16} className="text-[#1DD7D4]" /> SEUS DADOS ESTÃO 100% SEGUROS
     </div>
   </div>
 );
@@ -742,7 +739,7 @@ const LoadingStep = ({ onNext }: { onNext: () => void }) => {
       'Analisando seu perfil...',
       'Buscando as melhores taxas...',
       'Calculando parcelas sem juros...',
-      'Gerando plano exclusivo MM FINANCEIRA...'
+      'Gerando plano exclusivo SABINO INVESTIMENTOS...'
     ];
     let i = 0;
     const interval = setInterval(() => {
@@ -764,20 +761,20 @@ const LoadingStep = ({ onNext }: { onNext: () => void }) => {
   return (
     <div className="px-6 py-8 flex flex-col items-center justify-center h-full min-h-[70vh] text-center">
       <div className="relative mb-8">
-        <div className="w-24 h-24 rounded-full border-4 border-blue-500/20 border-t-[#38BDF8] animate-spin flex items-center justify-center"></div>
-        <div className="absolute inset-0 flex items-center justify-center text-[#D4090B]">
+        <div className="w-24 h-24 rounded-full border-4 border-teal-500/20 border-t-[#1DD7D4] animate-spin flex items-center justify-center"></div>
+        <div className="absolute inset-0 flex items-center justify-center text-[#1DD7D4]">
           <Sparkles size={28} className="animate-pulse" />
         </div>
       </div>
       <h2 className="text-3xl font-extrabold text-white mb-2 tracking-tight">Processando Análise...</h2>
-      <p className="text-blue-200 text-lg font-medium">{loadingText}</p>
+      <p className="text-teal-200 text-lg font-medium">{loadingText}</p>
     </div>
   );
 };
 
 const Step6 = ({ formData }: any) => {
   const handleWhatsApp = () => {
-    const text = `Olá! Fiz uma simulação no site da MM FINANCEIRA e gostaria de falar com um especialista.\n\n*Resumo da Simulação:*\nAlvo: ${formData.target}\nCrédito: ${formatCurrency(formData.credit)}\nEntrada: ${formatCurrency(formData.entry)}\nParcela: ${formatCurrency(formData.installment)}\nNome: ${formData.name}\nWhatsApp: ${formData.phone}${formData.referredBy ? `\nIndicado por: ${formData.referredBy}` : ''}`;
+    const text = `Olá! Fiz uma simulação no site da Sabino Investimentos e gostaria de falar com um especialista.\n\n*Resumo da Simulação:*\nAlvo: ${formData.target}\nCrédito: ${formatCurrency(formData.credit)}\nEntrada: ${formatCurrency(formData.entry)}\nParcela: ${formatCurrency(formData.installment)}\nNome: ${formData.name}\nWhatsApp: ${formData.phone}${formData.referredBy ? `\nIndicado por: ${formData.referredBy}` : ''}`;
     const encodedText = encodeURIComponent(text);
     window.open(`https://wa.me/558791975063?text=${encodedText}`, '_blank');
   };
@@ -785,28 +782,28 @@ const Step6 = ({ formData }: any) => {
   return (
     <div className="px-6 py-8 flex flex-col h-full min-h-[70vh]">
       <div className="text-center mb-6">
-        <div className="inline-flex items-center gap-1.5 bg-[#D4090B]/20 border border-[#D4090B]/40 text-[#EF4444] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+        <div className="inline-flex items-center gap-1.5 bg-teal-500/20 border border-teal-400/40 text-[#1DD7D4] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
           <Sparkles size={14} /> Condição Especial Liberada
         </div>
         <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">Plano Gerado!</h2>
-        <p className="text-blue-200/80 text-base mt-1">Sua estratégia personalizada está pronta.</p>
+        <p className="text-teal-200/80 text-base mt-1">Sua estratégia personalizada está pronta.</p>
       </div>
       
-      <div className="bg-[#0c224f]/85 p-7 rounded-[2rem] shadow-2xl border border-blue-400/25 mb-8 backdrop-blur-xl">
-        <div className="flex justify-between items-center py-3.5 border-b border-blue-400/15">
-          <span className="text-blue-300/70 font-bold text-xs tracking-widest uppercase">Alvo Selecionado</span>
+      <div className="bg-[#042435]/85 p-7 rounded-[2rem] shadow-2xl border border-teal-500/25 mb-8 backdrop-blur-xl">
+        <div className="flex justify-between items-center py-3.5 border-b border-teal-500/15">
+          <span className="text-teal-300/70 font-bold text-xs tracking-widest uppercase">Alvo Selecionado</span>
           <span className="text-white font-bold text-lg">{formData.target}</span>
         </div>
-        <div className="flex justify-between items-center py-3.5 border-b border-blue-400/15">
-          <span className="text-blue-300/70 font-bold text-xs tracking-widest uppercase">Crédito Solicitado</span>
-          <span className="text-[#38BDF8] font-black text-2xl">{formatCurrency(formData.credit)}</span>
+        <div className="flex justify-between items-center py-3.5 border-b border-teal-500/15">
+          <span className="text-teal-300/70 font-bold text-xs tracking-widest uppercase">Crédito Solicitado</span>
+          <span className="text-[#1DD7D4] font-black text-2xl">{formatCurrency(formData.credit)}</span>
         </div>
-        <div className="flex justify-between items-center py-3.5 border-b border-blue-400/15">
-          <span className="text-blue-300/70 font-bold text-xs tracking-widest uppercase">Entrada Prevista</span>
+        <div className="flex justify-between items-center py-3.5 border-b border-teal-500/15">
+          <span className="text-teal-300/70 font-bold text-xs tracking-widest uppercase">Entrada Prevista</span>
           <span className="text-white font-bold text-lg">{formatCurrency(formData.entry)}</span>
         </div>
         <div className="flex justify-between items-center py-3.5">
-          <span className="text-blue-300/70 font-bold text-xs tracking-widest uppercase">Parcela Estimada</span>
+          <span className="text-teal-300/70 font-bold text-xs tracking-widest uppercase">Parcela Estimada</span>
           <span className="text-emerald-400 font-black text-xl">{formatCurrency(formData.installment)}</span>
         </div>
       </div>
@@ -816,10 +813,10 @@ const Step6 = ({ formData }: any) => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="text-blue-200 font-semibold text-sm mb-4 text-center flex items-center gap-1.5"
+          className="text-teal-200 font-semibold text-sm mb-4 text-center flex items-center gap-1.5"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          Consultor MM FINANCEIRA disponível agora!
+          Consultor Sabino Investimentos disponível agora!
         </motion.p>
         
         <motion.button 
@@ -877,16 +874,16 @@ const RecentActivity = () => {
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.9 }}
-          className="fixed bottom-6 left-4 right-4 md:left-auto md:right-6 md:w-80 bg-zinc-950/90 p-3.5 rounded-2xl shadow-xl border border-zinc-800 flex items-center gap-4 z-50 backdrop-blur-md"
+          className="fixed bottom-6 left-4 right-4 md:left-auto md:right-6 md:w-80 bg-[#042435]/95 p-3.5 rounded-2xl shadow-xl border border-teal-500/30 flex items-center gap-4 z-50 backdrop-blur-md"
         >
-          <div className="bg-[#073691]/25 text-[#3B82F6] p-2.5 rounded-full shrink-0 border border-[#073691]/40">
+          <div className="bg-teal-500/20 text-[#1DD7D4] p-2.5 rounded-full shrink-0 border border-teal-500/40">
             <Bell size={20} />
           </div>
           <div>
             <p className="text-[15px] text-white leading-tight">
               <span className="font-bold">{current.name}</span> {current.action}
             </p>
-            <p className="text-xs text-zinc-500 mt-0.5 font-medium">{current.time}</p>
+            <p className="text-xs text-teal-300/60 mt-0.5 font-medium">{current.time}</p>
           </div>
         </motion.div>
       )}
@@ -929,22 +926,22 @@ export default function App() {
   const progress = step === 0 ? 0 : Math.round((step / 7) * 100);
 
   return (
-    <div className="min-h-screen font-sans text-white relative overflow-hidden flex justify-center selection:bg-blue-600/40">
-      {/* Dynamic Corporate Navy Blue Background */}
-      <div className="fixed inset-0 z-0 bg-[#071739]">
-        {/* Layer 1: Navy mesh gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1E4A] via-[#08183D] to-[#040D21]"></div>
+    <div className="min-h-screen font-sans text-white relative overflow-hidden flex justify-center selection:bg-teal-500/40">
+      {/* Dynamic Sabino Investimentos Dark Background */}
+      <div className="fixed inset-0 z-0 bg-[#021722]">
+        {/* Layer 1: Petrol Navy mesh gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#021722] via-[#042435] to-[#010e17]"></div>
         
         {/* Layer 2: Subtle grid pattern */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none"></div>
 
-        {/* Layer 3: Animated ambient glowing spheres */}
-        <div className="absolute -top-32 -left-20 w-[500px] h-[500px] bg-blue-600/25 rounded-full blur-[120px] pointer-events-none animate-pulse-slow"></div>
-        <div className="absolute top-1/3 -right-24 w-[420px] h-[420px] bg-red-600/18 rounded-full blur-[130px] pointer-events-none animate-pulse-slow"></div>
-        <div className="absolute -bottom-24 left-10 w-[450px] h-[450px] bg-blue-500/20 rounded-full blur-[110px] pointer-events-none"></div>
+        {/* Layer 3: Animated ambient glowing spheres in Sabino colors */}
+        <div className="absolute -top-32 -left-20 w-[500px] h-[500px] bg-teal-500/18 rounded-full blur-[130px] pointer-events-none animate-pulse-slow"></div>
+        <div className="absolute top-1/3 -right-24 w-[420px] h-[420px] bg-sky-500/15 rounded-full blur-[140px] pointer-events-none animate-pulse-slow"></div>
+        <div className="absolute -bottom-24 left-10 w-[450px] h-[450px] bg-emerald-500/15 rounded-full blur-[120px] pointer-events-none"></div>
 
         {/* Layer 4: Subtle brand watermark */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.045] overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] overflow-hidden">
           <img src={BG_IMAGE} alt="" className="w-[500px] max-w-[85vw] h-auto object-contain select-none" />
         </div>
       </div>
@@ -953,26 +950,26 @@ export default function App() {
         
         {/* Navigation Header when in Funnel mode */}
         {viewMode === 'funnel' && (
-          <div className="px-5 py-3.5 flex items-center justify-between sticky top-0 z-30 bg-[#071739]/90 backdrop-blur-xl border-b border-blue-400/20 shadow-lg">
+          <div className="px-5 py-3.5 flex items-center justify-between sticky top-0 z-30 bg-[#021722]/90 backdrop-blur-xl border-b border-teal-500/20 shadow-lg">
             <button 
               onClick={() => setViewMode('bio')}
-              className="flex items-center gap-1.5 text-xs font-bold text-blue-200 hover:text-white transition-colors py-1.5 px-3 rounded-full bg-[#0a1f4d] border border-blue-400/25 shadow-sm cursor-pointer"
+              className="flex items-center gap-1.5 text-xs font-bold text-teal-200 hover:text-white transition-colors py-1.5 px-3 rounded-full bg-[#042435] border border-teal-500/25 shadow-sm cursor-pointer"
             >
               <ArrowLeft size={14} /> Início / Bio Links
             </button>
 
             {step > 0 && (
               <div className="flex items-center gap-3 flex-1 ml-3">
-                <button onClick={prevStep} className="text-xs font-bold text-blue-300/70 hover:text-white transition-colors cursor-pointer">
+                <button onClick={prevStep} className="text-xs font-bold text-teal-300/70 hover:text-white transition-colors cursor-pointer">
                   Voltar
                 </button>
-                <div className="flex-1 h-2 bg-[#0a1e4a] rounded-full overflow-hidden p-0.5 border border-blue-400/20">
+                <div className="flex-1 h-2 bg-[#021722] rounded-full overflow-hidden p-0.5 border border-teal-500/20">
                   <div 
-                    className="h-full bg-gradient-to-r from-[#073691] via-[#2563EB] to-[#D4090B] transition-all duration-500 ease-out rounded-full shadow-[0_0_12px_rgba(37,99,235,0.7)]"
+                    className="h-full bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#0D9488] transition-all duration-500 ease-out rounded-full shadow-[0_0_12px_rgba(29,215,212,0.7)]"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
-                <span className="text-xs font-bold text-blue-200 w-8 text-right">{progress}%</span>
+                <span className="text-xs font-bold text-teal-200 w-8 text-right">{progress}%</span>
               </div>
             )}
           </div>
