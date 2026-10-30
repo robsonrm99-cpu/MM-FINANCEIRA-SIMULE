@@ -17,6 +17,12 @@ const formatCurrency = (value: number) => {
 const BG_IMAGE = "https://res.cloudinary.com/dsevqnhts/image/upload/v1789581810/Extracting_featured_logo_image_20260916144958_xjb7co.jpg";
 const LOGO_IMAGE = "https://res.cloudinary.com/dsevqnhts/image/upload/c_crop,x_120,y_370,w_760,h_280/v1789581810/Extracting_featured_logo_image_20260916144958_xjb7co.jpg";
 
+// Informações de contato e localização da Sabino Investimentos
+const WHATSAPP_NUMBER = "5581986926699";
+const WHATSAPP_DISPLAY = "(81) 98692-6699";
+const CONTACT_EMAIL = "rogerio_sabino@hotmail.com";
+const LOCATION_DISPLAY = "Caruaru - PE";
+
 // Reusable Luxury Brand Badge presenting the complete Sabino Investimentos logo banner
 export const LogoBrand = ({ 
   size = "lg", 
@@ -158,7 +164,7 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
           <motion.a
             whileHover={{ scale: 1.01, y: -1 }}
             whileTap={{ scale: 0.98 }}
-            href="https://wa.me/558791975063?text=Ol%C3%A1!%20Vim%20pelo%20link%20da%20bio%20da%20Sabino%20Investimentos%20e%20gostaria%20de%20falar%20com%20um%20consultor."
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1!%20Vim%20pelo%20link%20da%20bio%20da%20Sabino%20Investimentos%20e%20gostaria%20de%20falar%20com%20um%20consultor.`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full bg-[#042435]/75 hover:bg-[#06334a]/90 border border-teal-500/20 hover:border-emerald-400/40 text-white font-semibold text-sm sm:text-base py-3.5 px-4 rounded-2xl shadow-md flex items-center justify-between transition-all group backdrop-blur-xl"
@@ -167,7 +173,10 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
               <div className="bg-emerald-500/20 text-emerald-400 p-2.5 rounded-xl border border-emerald-500/30 shrink-0">
                 <MessageCircle size={20} />
               </div>
-              <span className="text-left">Fale com um Consultor (WhatsApp)</span>
+              <div className="text-left">
+                <span className="block leading-tight">Fale com um Consultor (WhatsApp)</span>
+                <span className="text-[11px] text-emerald-400/90 font-medium">{WHATSAPP_DISPLAY}</span>
+              </div>
             </div>
             <ChevronRight size={18} className="text-teal-300/50 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
           </motion.a>
@@ -178,14 +187,17 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
           <motion.a
             whileHover={{ scale: 1.01, y: -1 }}
             whileTap={{ scale: 0.98 }}
-            href="mailto:contato@sabinoinvestimentos.com.br?subject=Atendimento%20Sabino%20Investimentos"
+            href={`mailto:${CONTACT_EMAIL}?subject=Atendimento%20Sabino%20Investimentos`}
             className="w-full bg-[#042435]/75 hover:bg-[#06334a]/90 border border-teal-500/20 hover:border-[#1DD7D4]/40 text-white font-semibold text-sm sm:text-base py-3.5 px-4 rounded-2xl shadow-md flex items-center justify-between transition-all group backdrop-blur-xl"
           >
             <div className="flex items-center gap-3">
               <div className="bg-[#1DD7D4]/20 text-[#1DD7D4] p-2.5 rounded-xl border border-[#1DD7D4]/30 shrink-0">
                 <Mail size={20} />
               </div>
-              <span className="text-left">Envie um E-mail</span>
+              <div className="text-left">
+                <span className="block leading-tight">Envie um E-mail</span>
+                <span className="text-[11px] text-[#1DD7D4]/90 font-medium">{CONTACT_EMAIL}</span>
+              </div>
             </div>
             <ChevronRight size={18} className="text-teal-300/50 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
           </motion.a>
@@ -203,7 +215,10 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
               <div className="bg-cyan-500/20 text-[#38BDF8] p-2.5 rounded-xl border border-cyan-500/30 shrink-0">
                 <MapPin size={20} />
               </div>
-              <span className="text-left">Nossa Localização</span>
+              <div className="text-left">
+                <span className="block leading-tight">Nossa Localização</span>
+                <span className="text-[11px] text-cyan-300/80 font-medium">{LOCATION_DISPLAY}</span>
+              </div>
             </div>
             <ChevronRight size={18} className="text-teal-300/50 group-hover:text-white group-hover:translate-x-1 transition-all shrink-0" />
           </motion.button>
@@ -248,7 +263,7 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
       {/* FOOTER */}
       <motion.div variants={itemVariants} className="mt-12 text-center text-xs text-teal-300/60">
         <p className="flex items-center justify-center gap-1 text-teal-200 font-medium mb-1">
-          <MapPin size={13} className="text-[#1DD7D4]" /> Petrolina - PE
+          <MapPin size={13} className="text-[#1DD7D4]" /> {LOCATION_DISPLAY}
         </p>
         <p>&copy; {new Date().getFullYear()} SABINO INVESTIMENTOS. Todos os direitos reservados.</p>
       </motion.div>
@@ -283,13 +298,13 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
 
               <h3 className="text-lg font-bold text-white mb-2">Atendimento Presencial e Online</h3>
               <p className="text-teal-200 text-sm mb-4">
-                Atendemos presencialmente em Petrolina e com especialistas online para todo o Brasil:
+                Atendemos presencialmente em {LOCATION_DISPLAY} e com especialistas online para todo o Brasil:
               </p>
 
               <div className="bg-[#021722]/80 p-4 rounded-2xl border border-teal-500/20 text-xs text-teal-200 space-y-2 mb-6 text-left">
                 <p className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#1DD7D4]"></span>
-                  <strong className="text-white">Petrolina - PE e Região</strong>
+                  <strong className="text-white">{LOCATION_DISPLAY} e Região</strong>
                 </p>
                 <p className="text-teal-300/80 pl-4">
                   Consultoria especializada sob medida para seu objetivo patrimonial.
@@ -297,7 +312,7 @@ const BioLinksView = ({ onStartSimulation }: { onStartSimulation: () => void }) 
               </div>
 
               <a
-                href="https://wa.me/558791975063?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20com%20um%20especialista%20da%20SABINO%20INVESTIMENTOS."
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20com%20um%20especialista%20da%20SABINO%20INVESTIMENTOS.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-gradient-to-r from-[#1DD7D4] via-[#0EA5E9] to-[#0D9488] text-[#021722] font-black py-3 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-teal-950/60 hover:brightness-110 transition-all text-sm border border-teal-300/40 cursor-pointer"
@@ -776,7 +791,7 @@ const Step6 = ({ formData }: any) => {
   const handleWhatsApp = () => {
     const text = `Olá! Fiz uma simulação no site da Sabino Investimentos e gostaria de falar com um especialista.\n\n*Resumo da Simulação:*\nAlvo: ${formData.target}\nCrédito: ${formatCurrency(formData.credit)}\nEntrada: ${formatCurrency(formData.entry)}\nParcela: ${formatCurrency(formData.installment)}\nNome: ${formData.name}\nWhatsApp: ${formData.phone}${formData.referredBy ? `\nIndicado por: ${formData.referredBy}` : ''}`;
     const encodedText = encodeURIComponent(text);
-    window.open(`https://wa.me/558791975063?text=${encodedText}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`, '_blank');
   };
 
   return (
